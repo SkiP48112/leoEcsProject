@@ -1,4 +1,4 @@
-using Code.SimpleMovementController.Components;
+using Code.SimpleMovementController.Tags;
 using UnityEngine;
 using Voody.UniLeo;
 

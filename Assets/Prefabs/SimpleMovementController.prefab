@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7616257218646138257}
   - component: {fileID: 9197793491426747741}
   - component: {fileID: 4008295640891458582}
+  - component: {fileID: 8257369583533126044}
   m_Layer: 0
   m_Name: SimpleMovementController
   m_TagString: Untagged
@@ -117,6 +118,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66a4aeff41f0d68408b889b2b8fe8c42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8257369583533126044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744686098187617395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa41b05051e24fa49a6ea69151305c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    gravityForce: 5
+    velocity: {x: 0, y: 0}
 --- !u!1 &9115919274214803397
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using Code.CodeShared.Components;
-using Code.SimpleMovementController.Components;
+using Code.CodeShared.Tags;
+using Code.SimpleMovementController.Tags;
 using Leopotam.Ecs;
 using UnityEngine;
 

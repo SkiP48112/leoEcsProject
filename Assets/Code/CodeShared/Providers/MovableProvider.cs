@@ -6,6 +6,5 @@ namespace Code.CodeShared.Providers
 {
     public class MovableProvider : MonoProvider<MovableComponent>
     {
-    
     }
 }
