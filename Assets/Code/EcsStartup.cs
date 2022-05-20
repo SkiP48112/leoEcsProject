@@ -31,11 +31,12 @@ namespace Code
         private void AddSystems()
         {
             _systems
-                .Add(new GravitySystem())
                 .Add(new SimpleControllerInputSystem())
                 .Add(new MovementSystem())
                 .Add(new JumpEventSenderSystem())
                 .Add(new JumpSystem())
+                .Add(new GroundCheckSystem())
+                .Add(new GravitySystem())
                 .Init();
         }
 

@@ -6,7 +6,7 @@ namespace Code.CodeShared.Systems
 {
     sealed class JumpSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<JumpEvent, JumpComponent, GravityComponent> _jumpFilter = null;
+        private readonly EcsFilter<JumpEvent, JumpComponent, GravityComponent, GroundCheckSphereComponent> _jumpFilter = null;
         
         void IEcsRunSystem.Run () 
         {
@@ -14,7 +14,10 @@ namespace Code.CodeShared.Systems
             {
                 ref var jumpComponent = ref _jumpFilter.Get2(item);
                 ref var gravityComponent = ref _jumpFilter.Get3(item);
-
+                ref var groundCheck = ref _jumpFilter.Get4(item);
+                if(!groundCheck.isGrounded)
+                    continue;
+                
                 gravityComponent.velocity.y = -jumpComponent.jumpForce;
             }
         }
