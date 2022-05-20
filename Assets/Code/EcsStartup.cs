@@ -1,3 +1,5 @@
+using Code.CodeShared.Systems;
+using Code.SimpleMovementController.Systems;
 using Leopotam.Ecs;
 using UnityEngine;
 using Voody.UniLeo;
@@ -28,6 +30,8 @@ namespace Code
         private void AddSystems()
         {
             _systems
+                .Add(new SimpleControllerInputSystem())
+                .Add(new MovementSystem())
                 .Init();
         }
 
