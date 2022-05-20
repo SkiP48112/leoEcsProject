@@ -1,4 +1,4 @@
-using Client;
+using Code.CodeShared.OneFrames;
 using Code.CodeShared.Systems;
 using Code.SimpleMovementController.Systems;
 using Leopotam.Ecs;

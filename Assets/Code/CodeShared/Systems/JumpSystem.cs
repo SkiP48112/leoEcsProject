@@ -1,5 +1,5 @@
-using Client;
 using Code.CodeShared.Components;
+using Code.CodeShared.OneFrames;
 using Leopotam.Ecs;
 
 namespace Code.CodeShared.Systems 
@@ -15,10 +15,12 @@ namespace Code.CodeShared.Systems
                 ref var jumpComponent = ref _jumpFilter.Get2(item);
                 ref var gravityComponent = ref _jumpFilter.Get3(item);
                 ref var groundCheck = ref _jumpFilter.Get4(item);
-                if(!groundCheck.isGrounded)
-                    continue;
-                
-                gravityComponent.velocity.y = -jumpComponent.jumpForce;
+
+                if (jumpComponent.currentJumpsAmount < jumpComponent.globalJumpsAmount)
+                {
+                    gravityComponent.velocity.y = -jumpComponent.jumpForce;
+                    jumpComponent.currentJumpsAmount++;
+                }
             }
         }
     }

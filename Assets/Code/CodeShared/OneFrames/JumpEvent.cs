@@ -1,5 +1,6 @@
-namespace Client {
-    struct JumpEvent {
-        // add your data here.
+namespace Code.CodeShared.OneFrames 
+{
+    internal struct JumpEvent 
+    {
     }
 }

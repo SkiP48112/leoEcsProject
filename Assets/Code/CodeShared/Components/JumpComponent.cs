@@ -6,5 +6,7 @@ namespace Code.CodeShared.Components
     public struct JumpComponent
     {
         public float jumpForce;
+        public int globalJumpsAmount;
+        public int currentJumpsAmount;
     }
 }
