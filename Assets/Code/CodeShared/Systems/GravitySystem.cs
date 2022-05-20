@@ -1,3 +1,4 @@
+using Client;
 using Code.CodeShared.Components;
 using Leopotam.Ecs;
 using UnityEngine;
@@ -14,7 +15,11 @@ namespace Code.CodeShared.Systems
             {
                 ref var gravityComponent = ref _gravityFilter.Get1(item);
                 ref var transformComponent = ref _gravityFilter.Get2(item);
-                gravityComponent.velocity.y += gravityComponent.gravityForce * Time.deltaTime;
+                ref var entity = ref _gravityFilter.GetEntity(item);
+                
+                if(!entity.Has<JumpEvent>())
+                    gravityComponent.velocity.y += gravityComponent.gravityForce * Time.deltaTime;
+                
                 transformComponent.transform.Translate(-gravityComponent.velocity * Time.deltaTime);
             }
         }
