@@ -189,7 +189,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 670217714, guid: 6bbde3401e76a284699693e5044f9568, type: 3}
       propertyPath: value.globalJumpsAmount
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100689647458251200, guid: 6bbde3401e76a284699693e5044f9568, type: 3}
       propertyPath: value.movementSpeed

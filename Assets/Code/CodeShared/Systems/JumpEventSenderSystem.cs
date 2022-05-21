@@ -9,7 +9,8 @@ namespace Code.CodeShared.Systems
     sealed class JumpEventSenderSystem : IEcsRunSystem
     {
         private readonly EcsFilter<PlayerTag, JumpComponent> _jumpEventFilter = null;
-        
+        private static readonly int Jump = Animator.StringToHash("Jump");
+
         void IEcsRunSystem.Run () 
         {
             if(!Input.GetKeyDown(KeyCode.Space))
